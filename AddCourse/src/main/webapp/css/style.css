@@ -1,0 +1,373 @@
+:root {
+  --background-color: #e3f2fd;
+
+  /* Heading Color */
+  --heading-color: #0d47a1;
+
+  /* Text Color */
+  --text-color: #212121;
+
+  /* Buttons */
+  --btn-color: #1565c0;
+  --btn-tint-color: #0b40a0;
+  --btn-text-color: #e3f2fd;
+
+  /* Links */
+  --links-color: #1565c0;
+
+  /* Box & Text Shadows */
+  --box-shadow-1: #b3e5fc;
+  --text-shadow-1: #64b5f6;
+
+  /* Colors for Login Page */
+  --login-bg: #000000ba;
+  --login-form-text: #cde8ff;
+  --login-btn-hover: #ffc107;
+
+  /* Colors for About Page */
+  --about-bg: #e3f2fde8;
+}
+
+/***************************************/
+/*    Define Universal Styles Here     */
+/***************************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/*************************************************************/
+/*                Define General Styles Here                 */
+/*************************************************************/
+
+.container {
+  padding: 4.8rem;
+}
+
+/* Styles Specific to Primary Heading */
+.heading-primary {
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.25rem;
+  color: var(--heading-color);
+  margin-bottom: 3.8rem;
+}
+
+/* General - Styles for Buttons*/
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: 1rem 2.5rem;
+  color: var(--btn-text-color);
+
+  font-size: 2.4rem;
+}
+
+/* General - Styles for Buttons with a Background */
+.btn-with-bg:link,
+.btn-with-bg:visited {
+  background-color: var(--btn-color);
+}
+
+.btn-with-bg:hover,
+.btn-with-bg:active {
+  background-color: var(--btn-tint-color);
+  box-shadow: 0.2rem 0.4rem 0.5rem var(--text-shadow-1);
+}
+
+/* General - Styles for Buttons No Background */
+
+.btn-no-bg:link,
+.btn-no-bg:visited {
+  color: var(--btn-color);
+}
+
+.btn-no-bg:hover,
+.btn-no-bg:active {
+  color: var(--btn-tint-color);
+  text-shadow: 0.2rem 0.2rem 0.4rem var(--text-shadow-1);
+}
+
+/*************************************************************/
+/*                  Define Header Styles Here                */
+/*************************************************************/
+
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  position: relative;
+  padding: 0 3.2rem;
+  height: 9.6rem;
+}
+
+.logo {
+  max-width: 18rem;
+}
+
+/*************************************************************/
+/*                  Define Nav Bar Styles Here               */
+/*************************************************************/
+.navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 2.4rem;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: var(--btn-tint-color);
+  text-shadow: 0.2rem 0.2rem 0.4rem var(--text-shadow-1);
+}
+
+.navbar-link.nav-login:link,
+.navbar-link.nav-login:visited {
+  padding: 1rem 2.5rem;
+  border-radius: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: var(--btn-color);
+}
+
+.navbar-link.nav-login:hover,
+.navbar-link.nav-login:active {
+  background-color: var(--btn-tint-color);
+  font-size: 2rem;
+  text-shadow: none;
+}
+
+/*************************************************************/
+/*                  Define Homepage Styles Here              */
+/*************************************************************/
+
+/* Homepage - General Styles for Homepage Hero Section*/
+
+.section-home-hero {
+  background-color: var(--background-color);
+  padding: 4.8rem 0;
+}
+
+.home-hero {
+  margin: 0 auto 0 auto;
+  padding: 20rem;
+  max-width: 192rem;
+}
+
+/* Homepage - General Styles for Heading, Subheading and buttons*/
+.home-hero-textbox {
+  align-items: center;
+  text-align: center;
+}
+
+/* Homepage - Styles Specific to Subheading */
+.home-hero .home-hero-description,
+.description {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5;
+
+  color: var(--text-color);
+  margin-top: 3.8rem;
+  margin-bottom: 5.6rem;
+}
+
+/*************************************************************/
+/*                Define Login Page Styles Here              */
+/*************************************************************/
+
+.login-hero {
+  width: 320px;
+  height: 350px;
+  background: var(--login-bg);
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 50px 30px;
+  border-radius: 20px;
+}
+
+.login-h1 {
+  margin: 0;
+  padding: 0 0 30px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.login-hero p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: var(--login-form-text);
+  font-size: 13px;
+}
+
+.login-hero input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-hero input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid var(--login-form-text);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-hero input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: var(--login-form-text);
+  color: #000;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.login-hero input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--login-btn-hover);
+  color: #000;
+}
+
+.login-hero a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+/*************************************************************/
+/*                Define User Page Styles Here               */
+/*************************************************************/
+
+.user-h1 {
+  margin: 0;
+  padding: 25px 0 30px;
+  text-align: center;
+  font-size: 58px;
+  letter-spacing: -0.25rem;
+  color: var(--heading-color);
+}
+
+.user-p1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5;
+
+  color: var(--text-color);
+  /*margin-top: 3.8rem;*/
+  margin-bottom: 5.6rem;
+}
+
+.user-p2 {
+  margin: 0;
+  padding: 1px 90px 30px;
+  text-align: center;
+  font-size: 25px;
+  /*letter-spacing: -0.25rem;*/
+  line-height: 2.3;
+  color: var(--heading-color);
+}
+
+.bullet-point {
+  /*padding: 10px 200px 30px;*/
+  font-size: 2.5rem;
+  /*letter-spacing: -0.25rem;*/
+  line-height: 2.3;
+  color: var(--text-color);
+
+  width: 50%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  list-style-position: inside;
+}
+
+/* Need to fix this so that sub bullet points are alligned with themselves (uniform layout order)*/
+.sub-bullet-point {
+  margin: 0;
+  padding: 10px 20px 30px;
+  font-size: 20px;
+  /*letter-spacing: -0.25rem;*/
+  text-align: center;
+  line-height: 2.3;
+  /* For some reason the sub bullet points are not blue */
+  color: var(--heading-color);
+}
+
+/*************************************************************/
+/*                Define About Page Styles Here              */
+/*************************************************************/
+
+.section-about-hero {
+  background-color: var(--about-bg);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-about-hero .description p {
+  padding-bottom: none;
+}
+
+.about-hero-list {
+  padding-top: 2.8rem;
+  padding-left: 6.4rem;
+}
+
+.about-hero-list li {
+  padding-bottom: 2.8rem;
+}
+
+.about-hero {
+  margin: 0 auto 0 auto;
+  padding: 1.8rem 7.2rem;
+  max-width: 320rem;
+}
+
+.about-ending-text {
+  font-size: 2.8rem;
+  font-family: serif;
+  font-style: italic;
+  font-weight: 540;
+  text-align: center;
+  line-height: 1.5;
+}
