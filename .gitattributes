@@ -1,0 +1,3 @@
+*.html linguist-detachable=true
+*.css linguist-detachable=true
+*.java linguist-detachable=true
